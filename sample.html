@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<!--CIVICCCCC.LTD HOME PAGE Sample-->
+<html lang="en">
+
+<head>
+    <title>
+        {<title#标题>}
+    </title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!--网页图标-->
+    <link rel="icon" href="favicon.jpg" type="image/x-icon">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css?family=Nunito+Sans:200,300,400,700,900|Roboto+Mono:300,400,500">
+    <link rel="stylesheet" href="fonts/icomoon/style.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+    <link rel="stylesheet" href="css/jquery-ui.css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/bootstrap-datepicker.css">
+    <link rel="stylesheet" href="fonts/flaticon/font/flaticon.css">
+    <link rel="stylesheet" href="css/aos.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<script>
+    location.href = "#";
+</script>
+
+<body>
+    <!--今日诗词 https://www.jinrishici.com/-->
+    <script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script>
+    <!--busuanzi 访问统计-->
+    <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js">
+        <!--菊花加载效果-->
+        <link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.3.0/css/font-awesome.min.css">
+            <!--link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css"-->
+    </script>
+    <!--JS自动跳转-->
+    <script type="text/javascript">
+        var esc_down = false;
+        //设定跳转的时间
+        var t = {<auto_redirect.time#跳转的时间>};
+            //是否被点击
+            var c_status = false
+            //导航条被点击后隐藏、停止跳转
+            function clicked() {
+                document.getElementById("redirect_c").style.display = "none";
+            c_status = true;
+            esc_down = true;
+            };
+            timer = setInterval("refer()", 1000); //启动1秒定时
+            function refer() {
+                if (t == 0 && !c_status) {
+                //跳转的地址
+                location = "{<auto_redirect.url#跳转的地址>}";
+            //location = "#"; //debug
+            clearInterval(timer)
+            document.getElementById("redirect_c").style.display = "none";
+                };
+            document.getElementById("redirect_c").onclick = clicked;
+            document.getElementById('show').innerHTML = t
+            // 计数器递减 
+            t--;
+            };
+            document.onkeydown = function(e) {
+                if ((e || event).keyCode == {<auto_redirect.keyCode#取消跳转的键盘代码>}) {
+                    if (!esc_down) {
+                    clicked();
+                    };
+                };
+            };
+    </script>
+    <div class="site-wrap">
+        <div class="site-mobile-menu">
+            <div class="site-mobile-menu-header">
+                <div class="site-mobile-menu-close mt-3">
+                    <span class="icon-close2 js-menu-toggle">
+                    </span>
+                </div>
+            </div>
+            <div class="site-mobile-menu-body">
+            </div>
+        </div>
+        <!-- .site-mobile-menu -->
+        <!--导航栏-->
+        <div class="site-navbar-wrap bg-white">
+            <div class="site-navbar bg-light">
+                <div class="container py-1">
+                    <div class="row align-items-center">
+                        <div class="col-2">
+                            <h2 class="mb-0 site-logo">
+                                <a href="{<navbar.href#站点名称链接>}">
+                                    {<navbar.name#站点名称>}
+                                </a>
+                            </h2>
+                        </div>
+                        <div class="d-flex ml-auto">
+                            <a href="#" class="d-flex align-items-center ml-auto mr-4">
+                                <span class="icon-envelope mr-2">
+                                </span>
+                                <span class="d-none d-md-inline-block">
+                                    {<navbar.email#邮箱>}
+                                </span>
+                            </a>
+                            <a href="#" class="d-flex align-items-center">
+                                <span class="{<navbar.href_icon#链接图标>}">
+                                </span>
+                                <a href="{<navbar.href_url#站点网址>}" class="d-none d-md-inline-block">
+                                    &nbsp; {<navbar.href_name#链接名称>}
+                                </a>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--横幅条显示-->
+        <h6 id="redirect_c" align="center">
+            点我留在当前页面(或者Esc按钮) - Click here to stay (<span id="show"></span> s)
+            &nbsp;&nbsp;
+            <!--点击量 style='display:none'-->
+            <span id="busuanzi_container_site_pv" style="display:none">总访问量:<span id="busuanzi_value_site_pv"><i
+                        class="fa fa-spinner fa-spin"></i></span> 次</span>
+            &nbsp;&nbsp;
+            <!--访客数 style='display:none'-->
+            <span id="busuanzi_container_site_uv" style="display:none">访客数:<span id="busuanzi_value_site_uv"><i
+                        class="fa fa-spinner fa-spin"></i></span>人</span>
+            <!--今日诗词-->
+            &nbsp;
+            <span id="jinrishici-sentence"></span>
+        </h6>
+        <!--主页介绍-->
+        <div class="slide-one-item home-slider owl-carousel">
+            <div class="site-blocks-cover overlay" style="background-image: url(images/page/zh.jpg);" data-aos="fade"
+                data-stellar-background-ratio="0.5">
+                <div class="container">
+                    <div class="row align-items-center justify-content-center text-center">
+                        <div class="col-md-10">
+                            <h1 class="mb-5">
+                                {<main.zh_name#中文标题>}
+                            </h1>
+                            <p>
+                                <a href="{<main.zh_url_a#中文链接一>}" class="btn btn-primary py-3 px-5 rounded-0">
+                                    {<main.zh_title_a#中文链接一标题>}
+                                </a>
+                                <a href="{<main.zh_url_b#中文链接二>}"
+                                    class="btn btn-white btn-outline-white py-3 px-5 rounded-0">
+                                    {<main.zh_title_b#中文链接二标题>}
+                                </a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="site-blocks-cover overlay" style="background-image: url(images/page/en.jpg);" data-aos="fade"
+                data-stellar-background-ratio="0.5">
+                <div class="container">
+                    <div class="row align-items-center justify-content-center text-center">
+                        <div class="col-md-10">
+                            <h1 class="mb-5">
+                                {<main.en_name#英文标题>}
+                            </h1>
+                            <p>
+                                <strong>
+                                    {<main.en_subtitle#英文副标题>}
+                                </strong>
+                            </p>
+                            <p>
+                                <a href="{<main.en_url_a#英文链接一>}" class="btn btn-primary py-3 px-5 rounded-0">
+                                    {<main.en_title_a#英文链接一标题>}
+                                </a>
+                                <a href="{<main.en_url_b#英文链接二>}"
+                                    class="btn btn-white btn-outline-white py-3 px-5 rounded-0">
+                                    {<main.en_title_b#英文链接二标题>}
+                                </a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--whatshere-->
+        <div class="site-section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 bg-image bg-sm-height mb-5 mb-md-0 order-md-2"
+                        style="background-image: url('images/page/whatshere.jpg');" data-aos="fade-up">
+                    </div>
+                    <div class="col-md-6 pr-md-5 order-md-1">
+                        <h2 class="display-3 line-height-xs text-black mb-4">What's <strong>HERE</strong></h2>
+                        <p class="mb-4">
+                            {<whatshere.zh#中文>}<br>{<whatshere.en#英文>}
+                        </p>
+                        <div id="left" style="float:left ; width:50%;"><!-- height:30%;background-color:#CCCCCC;-->
+                            <ul class="site-block-check">
+                                <li>
+                                    What's HERE
+                                </li>
+                                <li>
+                                    Navigation
+                                </li>
+                                <li>
+                                    What People Say
+                                </li>
+                                <li>
+                                    Videos
+                                </li>
+                            </ul>
+                        </div>
+                        <div id="right" style="float:left ; width:50%; height:35%;"><!--background-color:#ACCCCC;-->
+                            <!--访客地图-->
+                            <!--p>
+                                    <script type="text/javascript" id="clustrmaps" src="//clustrmaps.com/map_v2.js?d=GQq6g6ZWbWzh-A7P_cl7iJc5y7GFLFbUO1Qh4eEOXOk&cl=ffffff&w=a">
+                                    </script>
+                                </p-->
+                            <p>
+                                <script type="text/javascript" id="clstr_globe"
+                                    src="//clustrmaps.com/globe.js?d=GQq6g6ZWbWzh-A7P_cl7iJc5y7GFLFbUO1Qh4eEOXOk">
+                                    </script>
+                            </p>
+                        </div>
+                        <p>
+                            <a href="{<whatshere.href_url#链接地址>}"
+                                class="btn btn-outline-primary btn-sm rounded-0 p-2 px-4">
+                                {<whatshere.href_name#链接名称>}
+                            </a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--Links-BEGIN-->
+        <!-- testimonials -->
+        <div class="testimonials py-5" id="testi">
+            <div class="container pb-xl-5 pb-lg-3">
+                <div class="price-sty position-relative mb-5">
+                    <h3 class="tittle text-center text-bl mb-2">
+                        NAVIGATION
+                    </h3>
+                    <span class="text-style-bot font-weight-bold">
+                        导航
+                    </span>
+                </div>
+                <div class="row pt-4">
+                    {^START^}
+                    <!--Link-Start-->
+                    <div class="col-lg-4 testi-sections mb-4">
+                        <div class="testimonials_grid">
+                            <div class="row mt-sm-5 mt-4">
+                                <div class="col-3 testi-img-res text-lg-left text-right">
+                                    <img src="images/links/{<links.icon#链接图标>}" alt="" class="img-fluid" />
+                                </div>
+                                <div class="col-7 testi_grid">
+                                    <h5>
+                                        <a href="{<links.url#链接地址>}">
+                                            {<links.name#链接名称>}
+                                        </a>
+                                    </h5>
+                                    <p>
+                                        {<links.sub#链接副标题>}
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Link-End-->
+                    {^END^}
+                </div>
+                <!--Talk-->
+                <p>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                </p>
+                <div class="price-sty position-relative mb-5">
+                    <h3 class="tittle text-center text-bl mb-2">
+                        What People Say
+                    </h3>
+                    <span class="text-style-bot font-weight-bold">
+                        大家说
+                    </span>
+                </div>
+                <div class="site-section bg-light">
+                    <div class="container">
+                        <div class="block-13 nonloop-block-13 owl-carousel" data-aos="fade">
+                            {^START^}
+                            <!--Talk-Start-->
+                            <div class="p-4">
+                                <div class="block-47 d-flex">
+                                    <div class="block-47-image d-none d-sm-block">
+                                        <img src="images/talk/{<talk.img#图标>}" alt="Image placeholder"
+                                            class="img-fluid">
+                                    </div>
+                                    <blockquote class="block-47-quote">
+                                        <p>
+                                            &ldquo;
+                                            {<talk.comment#评论>}
+                                                &rdquo;
+                                        </p>
+                                        <cite class="block-47-quote-author">
+                                            &mdash;{<talk.name#姓名>}
+                                        </cite>
+                                    </blockquote>
+                                </div>
+                            </div>
+                            <!--Talk-End-->
+                            {^END^}
+                        </div>
+                    </div>
+                </div>
+                <!-- artalk安装代码 -->
+                <!-- CSS -->
+                <link href="https://civiccccc.ltd/artalk/dist/Artalk.css" rel="stylesheet" />
+                <!-- JS -->
+                <script src="https://civiccccc.ltd/artalk/dist/Artalk.js"></script>
+                <!-- Artalk -->
+                <div id="Comments"></div>
+                <script>
+                Artalk.init({
+                el: '#Comments', // 绑定元素的 Selector
+                pageKey: 'https://civiccccc.ltd', // 固定链接
+                pageTitle: '', // 页面标题 (留空自动获取)
+                server: 'https://civiccccc.ltd/artalk', // 后端地址
+                site: '主站', // 你的站点名
+                })
+                </script>
+                <!-- artalk安装结束 -->
+                <div class="site-block-half d-block d-lg-flex site-block-video" data-aos="fade">
+                    <div class="image bg-image order-2"
+                        style="background-image: url(images/page/{<videos_img#视频封面>}); ">
+                        <a href="{<videos_href#播放按钮链接>}" class="play-button popup-vimeo">
+                            <span class="icon-play">
+                            </span>
+                        </a>
+                    </div>
+                    <div class="text order-1">
+                        <h2 class="site-heading text-black mb-3">
+                            See Our
+                            <strong>
+                                Videos
+                            </strong>
+                        </h2>
+                        <p class="lead">
+                            {<videos_sub#副标题>}
+                        </p>
+                        <p>
+                            {<videos_comment#简介>}
+                        </p>
+                    </div>
+                </div>
+                <div class="promo py-3 bg-primary" data-aos="fade">
+                    <div class="container text-center">
+                        <h4 class="d-block mb-1 font-weight-light text-white">
+                            <a href="#" class="text-white d-block">
+                                TOP
+                            </a>
+                        </h4>
+                    </div>
+                </div>
+                <!--div>
+                        <p>
+                            <script type="text/javascript" id="clustrmaps" src="//clustrmaps.com/map_v2.js?d=GQq6g6ZWbWzh-A7P_cl7iJc5y7GFLFbUO1Qh4eEOXOk&cl=ffffff&w=a">
+                            </script>
+                        </p>
+                        <p>
+                            <script type="text/javascript" id="clstr_globe" src="//clustrmaps.com/globe.js?d=GQq6g6ZWbWzh-A7P_cl7iJc5y7GFLFbUO1Qh4eEOXOk">
+                            </script>
+                        </p>
+                    </div-->
+                <footer class="site-footer">
+                    <div class="container">
+                        <div class="row text-center">
+                            <div class="col-md-12">
+                                <p>
+                                    <!-- Link back to Colorlib can't be removed. Template is licensed under
+                                        CC BY 3.0. -->
+                                    Copyright &copy;
+                                    <script>
+                document.write(new Date().getFullYear());
+                                    </script>
+                                    <a href="{<footer.about>}" target="_blank">
+                                        {<footer.author>}
+                                    </a>
+                                    All Rights Reserved | Made with
+                                    <i class="icon-heart-o" aria-hidden="true">
+                                    </i>
+                                    by
+                                    <a href="https://colorlib.com" target="_blank">
+                                        Colorlib
+                                    </a>
+                                    &
+                                    <a href="http://w3layouts.com">
+                                        W3layouts.
+                                    </a>
+                                    | Template:Industrie & Coiffure.
+                                    <!-- Link back to Colorlib can't be removed. Template is licensed under
+                                        CC BY 3.0. -->
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </footer>
+            </div>
+            <a href="#" class="move-top text-center">
+            </a>
+            <script src="js/jquery-3.3.1.min.js">
+            </script>
+            <script src="js/jquery-migrate-3.0.1.min.js">
+            </script>
+            <script src="js/jquery-ui.js">
+            </script>
+            <script src="js/popper.min.js">
+            </script>
+            <script src="js/bootstrap.min.js">
+            </script>
+            <script src="js/owl.carousel.min.js">
+            </script>
+            <script src="js/jquery.stellar.min.js">
+            </script>
+            <script src="js/jquery.countdown.min.js">
+            </script>
+            <script src="js/jquery.magnific-popup.min.js">
+            </script>
+            <script src="js/bootstrap-datepicker.min.js">
+            </script>
+            <script src="js/aos.js">
+            </script>
+            <script src="js/main.js">
+            </script>
+</body>
+
+</html>

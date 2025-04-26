@@ -1,0 +1,266 @@
+<!-- Author: W3layouts Author URL: http://w3layouts.com License: Creative
+Commons Attribution 3.0 Unported License URL: http://creativecommons.org/licenses/by/3.0/
+-->
+<!DOCTYPE html>
+<html>
+    
+    <head>
+        <title>
+            Like & Share —— Ryan Yim
+        </title>
+        <link href="css/style.css" rel='stylesheet' type='text/css' />
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <!-- <meta name="keywords" content=""./>
+        -->
+        <script type="application/x-javascript">
+            addEventListener("load",
+            function() {
+                setTimeout(hideURLbar, 0);
+            },
+            false);
+            function hideURLbar() {
+                window.scrollTo(0, 1);
+            }
+        </script>
+        </script>
+        <!--webfonts-->
+        <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800'
+        rel='stylesheet' type='text/css'>
+        <!--//webfonts-->
+    </head>
+    
+    <body>
+    <!--busuanzi 访问统计-->
+        <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js">
+        <!--菊花加载效果-->
+        <link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.3.0/css/font-awesome.min.css">
+        <!--link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css"-->
+        </script>
+        <!--JS延时显示-->
+        <script type="text/javascript">
+            var esc_down = false;
+             //设定显示的时间
+            var t = 15;
+            //是否被点击
+            function clicked() {
+                document.getElementById("redirect_c").style.display = "none";
+            };
+            timer = setInterval("refer()", 1000); //启动1秒定时 
+            function refer() {
+                if (t == 0) {
+                    // 如果时间到了
+                    document.getElementById('show').innerHTML = ""
+                    clearInterval(timer)
+                    document.getElementById("redirect_c").style.display = "";
+                    // 八秒后隐藏
+                    setTimeout("clicked()",8000);
+                    return;
+                };
+                document.getElementById("redirect_c").onclick = clicked;
+                document.getElementById('show').innerHTML = "("+t+"s)"
+                // 计数器递减 
+                t--;
+            };
+            document.onkeydown = function(e) {
+                // 显示地图
+                if ((e || event).keyCode == 27) {
+                    if (!esc_down) {
+                        esc_down = true;
+                        document.getElementById("hiddenmap").style.display = "";
+                    }else{
+                        esc_down = false;
+                        document.getElementById("hiddenmap").style.display = "none";
+                    }
+                };
+            };
+        </script>
+        <!--横幅条-->
+        <h6 id="redirect_c" align="center" style="display: none">
+        点我隐藏 - Click here to hide this bar <span id="show"></span>
+        &nbsp;&nbsp;
+        <!--点击量 style='display:none'-->
+        <span id="busuanzi_container_site_pv" style="display:none">总访问量:<span id="busuanzi_value_site_pv"><i class="fa fa-spinner fa-spin"></i></span> 次</span>
+        &nbsp;&nbsp;
+        <!--访客数-->
+        <span id="busuanzi_container_site_uv" style="display:none">访客数:<span id="busuanzi_value_site_uv"><i class="fa fa-spinner fa-spin"></i></span>人</span>
+        </h6>
+        <!--start-main-->
+        <div class="Flat-social-icons">
+            <div class="inner-content">
+                <h1>
+                    Like & Share
+                </h1>
+                <div class="icons-section">
+                    <div class="left-icons">
+                        <!-- 主站 -->
+                        <div class="main">
+                            <a href="https://civiccccc.ltd">
+                                <span>
+                                </span>
+                                <lable>
+                                    主站 - Website
+                                </lable>
+                                <div class="clear">
+                                </div>
+                            </a>
+                        </div>
+                        <!-- -->
+                        <div class="bilibili">
+                            <a href="https://space.bilibili.com/473585000">
+                                <span>
+                                </span>
+                                <lable>
+                                    哔哩哔哩 - bilibili
+                                </lable>
+                                <a href="http://live.bilibili.com/22492267" style="color: rgb(0,156,216);">
+                                    (哔站直播)
+                                </a></br>
+                                <!--a href="https://www.inke.cn/liveroom/index.html?uid=740772375" style="color: rgb(0,226,206);">
+                                    (映客
+                                </a>
+                                <a href="https://www.inke.cn/liveroom/index.html?uid=752187642" style="color: rgb(104, 87, 253);">
+                                    直播)
+                                </a-->
+                                <div class="clear">
+                                </div>
+                            </a>
+                        </div>
+                        <div class="instagram">
+                            <a href="https://www.instagram.com/just_aaaa_r">
+                                <span>
+                                </span>
+                                <lable>
+                                    Instagram
+                                </lable>
+                                <a href="https://imginn.com/just_aaaa_r/" style="color: rgb(253, 255, 116);">
+                                    (国内点我)
+                                </a>
+                                <div class="clear">
+                                </div>
+                            </a>
+                        </div>
+                        <div class="qq">
+                            <a href="https://jq.qq.com/?_wv=1027&k=6GvmNc5u">
+                                <span>
+                                </span>
+                                <lable>
+                                    加入群聊【西荣街头极限健身】
+                                </lable>
+                                <a href="https://civiccccc.ltd/rmshadows/img/scenery/qqgroup.png" style="color: rgb(253, 255, 116);">
+                                    (二维码点我)
+                                </a>
+                                </br>
+                                <!--a href="https://t.me/" style="color: rgb(253, 255, 116);">
+                                    ( Telegram )
+                                </a-->
+                                <div class="clear">
+                                </div>
+                            </a>
+                        </div>
+                        <!-- 未使用 -->
+                        <!-- <div class="delicious"><a href="#"><span> </span> <lable>Sign in with Delicious</lable> -->
+                        <!-- <div class="clear"></div></a> -->
+                        <!-- </div> -->
+                    </div>
+                    <div class="right-icons">
+                        <div class="blog">
+                            <a href="https://civiccccc.ltd/rmshadows/">
+                                <span>
+                                </span>
+                                <lable>
+                                    博客 - Blog
+                                </lable>
+                                <!--a href="https://rmshadows.gitee.io" style="color: rgb(253, 255, 116);">
+                                    (国内点我)
+                                </a-->
+                                <div class="clear">
+                                </div>
+                            </a>
+                        </div>
+                        <div class="youtube">
+                            <a href="https://www.youtube.com/channel/UClSNRjPYcdq6YDLmLV2JchA">
+                                <span>
+                                </span>
+                                <lable>
+                                    Youtube Channel
+                                </lable>
+                                <!--a href="https://web.libera.chat/" style="color: rgb(253, 255, 116);">
+                                    (Libera IRC)
+                                </a-->
+                                <div class="clear">
+                                </div>
+                            </a>
+                        </div>
+                        <div class="github">
+                            <a href="https://github.com/rmshadows">
+                                <span>
+                                </span>
+                                <lable>
+                                    Github
+                                </lable>
+                                <a href="https://gitee.com/rmshadows" style="color: rgb(253, 255, 116);">
+                                    (Gitee点我)
+                                </a>
+                                <div class="clear">
+                                </div>
+                            </a>
+                        </div>
+                        <div class="zhihu">
+                            <a href="https://www.zhihu.com/people/rmshadows">
+                                <span>
+                                </span>
+                                <lable>
+                                    知乎
+                                </lable>
+                                <a href="https://www.ixigua.com/home/3026291179127518/" style="color: rgb(86, 216, 0);">
+                                    (西瓜视频)
+                                </a></br>
+                                <div class="clear">
+                                </div>
+                            </a>
+                        </div>
+                        <!--div class="github">
+                            <a href="https://www.zhihu.com/people/rmshadows">
+                                <span>
+                                </span>
+                                <lable>
+                                    知乎
+                                </lable>
+                                <div class="clear">
+                                </div>
+                            </a>
+                        <div class="clear">
+                        </div>
+                        </div-->
+                    </div>
+                    <div class="clear">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="hiddenmap" style="display: none">
+            <p>
+                <script type="text/javascript" id="clustrmaps" src="//clustrmaps.com/map_v2.js?d=GQq6g6ZWbWzh-A7P_cl7iJc5y7GFLFbUO1Qh4eEOXOk&cl=ffffff&w=a">
+                </script>
+            </p>
+        </div>
+        <!--start-copyright-->
+        <div class="copy-right">
+            <div class="wrap">
+                <p>
+                    Copyright &copy; 2024
+                    <a href="https://civiccccc.ltd/rmshadows/about/">
+                        Ryan
+                    </a>
+                    | All rights Reserved | Template by &nbsp;
+                    <a href="http://w3layouts.com">
+                        W3Layouts
+                    </a>
+                </p>
+            </div>
+        </div>
+        <!--//end-copyright-->
+    </body>
+
+</html>

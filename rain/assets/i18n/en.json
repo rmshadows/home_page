@@ -1,0 +1,25 @@
+{
+    "version": {
+        "current": "1.0.5"
+    },
+    "site_settings": {
+        "site_url": "https://civiccccc.ltd/",
+        "brand_name": "All Rights Reserved - DROP(drop.io) | re-Ported by Ryan",
+        "version": "Version 0.1.0 (Alpha)",
+        "icon": "/assets/img/logoO.svg"
+    },
+
+    "routes": {
+        "auth_base": "/auth"
+    },
+
+    "page_titles": {
+        "404_not_found": "404 Not Found"
+    },
+
+    "page_errors": {
+        "404_title": "404",
+        "404_sub_title": "Not Found",
+        "go_home": "Go Home"
+    }
+}
