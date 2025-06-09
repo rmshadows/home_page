@@ -131,14 +131,31 @@
                 <p>
                     留言板
                 </p>
+                <!-- artalk安装代码 -->
+                <!-- CSS -->
+                <link href="https://civiccccc.ltd/artalk/dist/Artalk.css" rel="stylesheet" />
+                <!-- JS -->
+                <script src="https://civiccccc.ltd/artalk/dist/Artalk.js"></script>
+                <!-- Artalk -->
+                <div id="Comments"></div>
+                <script>
+                Artalk.init({
+                el: '#Comments', // 绑定元素的 Selector
+                pageKey: 'https://civiccccc.ltd', // 固定链接
+                pageTitle: '', // 页面标题 (留空自动获取)
+                server: 'https://civiccccc.ltd/artalk', // 后端地址
+                site: '主站', // 你的站点名
+                })
+                </script>
+                <!-- artalk安装结束 -->
                 <!-- isso安装代码 -->
-                <script data-isso="https://civiccccc.ltd/isso/" data-isso-css:="true"
+                <!-- <script data-isso="https://civiccccc.ltd/isso/" data-isso-css:="true"
                 data-isso-lang="en" data-isso-reply-to-self="true" data-isso-require-author="true"
                 data-isso-require-email="true" data-isso-max-comments-top="10" data-isso-max-comments-nested="20"
                 data-isso-reveal-on-click="20" data-isso-avatar="true" data-isso-avatar-bg=#f0f0f0
                 data-isso-avatar-fg=#9abf88 #5698c4 #e279a3 #9163b6 ... data-isso-vote="true"
                 data-vote-levels="0,25,50,75,100" src="https://civiccccc.ltd/isso/js/embed.min.js">
-                </script>
+                </script> -->
                 <div>
                     <section id="isso-thread" class="links_isso">
                     </section>
