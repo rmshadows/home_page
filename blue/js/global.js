@@ -8,7 +8,7 @@ $( function() {
 // Add background image
 	$.backstretch('images/road.jpg');
 	// 在这里修改结束日期 月 日 年 时间
-	var endDate = "01  01, 2026 00:00:00";
+	var endDate = "02  17, 2026 00:00:00";
 	$('.countdown.simple').countdown({ date: endDate });
 	$('.countdown.styled').countdown({
 	  date: endDate,
